@@ -1,17 +1,39 @@
-<!DOCTYPE html>
 <html>
-<body>
+    <head>
+        <title> My Portfolio</title>
+        <style>
+            body{
+                background-color: chocolate;
+            }
+            a:link {
+        text-decoration: none;
+        background-color: chocolate;
+        text-size-adjust:initial;
+        font-size: larger;
+        }
+/* mouse over link */
+        a:hover {
+        background-color: white;
+        text-decoration: none;
+        color: blue;
+        }   
 
-<h1>My First JavaScript</h1>
-
-<button type="button"
-onclick="document.getElementById('demo').innerHTML = Date()">
-Click me to display Date and Time.</button>
-<button type="button"
-onclick="location.href='aboutme.html'">
-AAA.</button>
-
-<p id="demo"></p>
-
-</body>
-</html> 
+/* selected link */
+        a:active {
+        text-decoration: none;
+        background-color:white;
+        color: rebeccapurple;
+    }
+        </style>
+    </head>
+    <body>
+        <h1>
+            My Portfolio
+        </h1>        
+    </body>
+    <a href="index.html"><img src="Home Button.png" alt="HTML tutorial" 
+    style="width:350px;height:350px;" title="Home"></a>
+    <a href="aboutme.html"><img src="Aboutme.png" style="width:363.74133px;height:350px;" title="About me"></a>
+    <a href="HYW.html"><img src="hyw.png" style="width:350px;height:350px;" title="How I Work"></a>
+    <a href="CaseStudies.html"><img src="Case Study.png" style="width:350px;height:350px;" title="Case Studies"></a>
+</html>

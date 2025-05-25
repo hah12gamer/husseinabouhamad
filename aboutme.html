@@ -1,14 +1,61 @@
 <!DOCTYPE html>
 <html>
 <body>
+<head>
+    <title>About Me</title>
 
-<h1>My First JavaScript</h1>
+    <style>
+        p.one {
+        border-style: solid;
+        border-width: 5px;
+        width:800px;
+        height:400px;
+        position: fixed;
+        bottom: 275px;
+        right: 300px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    }
+    p.one:hover{
+        color: white;
+    }
+        body{
+            background-color: red;
+            }
+            a:link {
+        text-decoration: none;
+        background-color: red;
+        text-size-adjust:initial;
+        font-size: larger;
+        }
+/* mouse over link */
+        a:hover {
+        background-color: white;
+        text-decoration: none;
+        }   
 
-<button type="button"
-onclick="document.getElementById('demo').innerHTML = Date()">
-Click me to display Date and Time.</button>
+/* selected link */
+        a:active {
+        text-decoration: none;
+        background-color:white;
+        color: rebeccapurple;
+    }
+        </style>
+</head>
+<h1>About Me</h1>
+    <a href="index.html"><img src="Home Button.png" alt="HTML tutorial" 
+    style="width:100px;height:100px;" title="Home"></a>
+    <br>
+    <a href="aboutme.html"><img src="Aboutme.png" style="width:104px;height:100px;" title="About me"></a>
+    <br>
+    <a href="HYW.html"><img src="hyw.png" style="width:100px;height:100px;" title="How I Work"></a>
+    <br>
+    <a href="CaseStudies.html"><img src="Case Study.png" style="width:100px;height:100px;" title="Case Studies"></a>
+    <br>
+    <p class="one">Hello, my name is Hussein. I am currently pursuing a degree in Civil Engineering and Computing Technology at the University of Ottawa’s Faculty of Engineering. I am based in the Ottawa–Gatineau Metropolitan Area, where my interests include public transportation, structural engineering, hydraulics, and computing technology.
+    <br><br>
+    While many of my interests fall under the civil engineering discipline, I also believe it is important to understand the computing concepts behind the software tools we use in everyday practice. This interdisciplinary perspective allows me to approach engineering challenges from both a technical and analytical standpoint.
+    <br><br>
+    I am currently in my fourth year (Summer 2025 term), enrolled in courses such as Foundation Design and Wastewater Management from the civil engineering stream, as well as User Interface Design from the computing side of the program. I’m passionate about integrating infrastructure and technology to build smarter, more efficient systems for the future.
+    </p>
 
-<p id="demo"></p>
-
-</body>
 </html> 
