@@ -1,0 +1,22 @@
+#email{
+    background-color: white;
+    width:10cm;
+    color:black;
+}
+#firstName{
+    background-color: white;
+    width:10cm;
+    color:black;
+}
+#submit{
+    background-color: red;
+    width:200px;
+    height:fit-content;
+}
+#jmbtrn{
+    background-color: rgb(41, 41, 48);
+    color: Red;
+}
+body{
+    background-color: rgb(12, 12, 226);
+}
