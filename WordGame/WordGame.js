@@ -1,16 +1,29 @@
-const wordlist=["AAA","AAB","ABA","ABB","BAB","BBB",];
+const wordlist=[ "consider", "minute", "accord", "evident", "practice", "intend", "concern", "commit", "issue", "approach",
+    "establish", "utter", "conduct", "engage", "obtain", "scarce", "policy", "straight", "stock", "apparent",
+    "property", "fancy", "concept", "court", "appoint", "passage", "vain", "instance", "coast", "project",
+    "commission", "constant", "circumstances", "constitute", "level", "affect", "institute", "render", "appeal", "generate",
+    "theory", "range", "campaign", "league", "labor", "confer", "grant", "dwell", "entertain", "contract",
+    "earnest", "yield", "wander", "insist", "knight", "convince", "inspire", "convention", "skill", "harry",
+    "financial", "reflect", "novel", "furnish", "compel", "venture", "territory", "temper", "bent", "intimate",
+    "undertake", "majority", "assert", "crew", "chamber", "humble", "scheme", "keen", "liberal", "despair",
+    "tide", "attitude", "justify", "flag", "merit", "manifest", "notion", "scale", "formal", "resource",
+    "persist", "contempt", "tour", "plead", "weigh", "mode", "distinction", "inclined", "attribute", "exert",
+    "oppress", "contend", "stake", "toil", "perish", "disposition", "rail", "cardinal", "boast", "advocate",
+    "bestow", "allege", "notwithstanding", "lofty", "multitude", "steep", "heed", "modest", "partial", "apt",
+    "esteem", "credible", "provoke", "tread", "ascertain", "fare", "cede", "perpetual", "decree", "contrive",  "consider","minute","accord","evident","practice","intend","concern","commit","issue","approach","establish","utter","conduct","engage","obtain","scarce","policy","straight","stock","apparent","property","fancy","concept","court","appoint","passage","vain","instance","coast","project","commission","constant","circumstances","constitute","level","affect","institute","render","appeal","generate","theory","range","campaign","league","labor","confer","grant","dwell","entertain","contract","earnest","yield","wander","insist","knight","convince","inspire","convention","skill","harry","financial","reflect","novel","furnish","compel","venture","territory","temper","bent","intimate","undertake","majority","assert","crew","chamber","humble","scheme"];
 let seen=[];
+const rowsPerPage = 10;
 let attempt=3;
 let points=0;
 let scores=[];
 function output(){
-    document.getElementById("title").textContent="Word";
-    document.getElementById("wordBox").textContent="Word";
+    document.getElementById("title").textContent="Go";
+    document.getElementById("wordBox").textContent="Press Seen/New";
     document.getElementById("pts").textContent=points;
 }
 function seenNext(){
     if(gameOver()){
-        document.getElementById("title").textContent="Gameover";
+        document.getElementById("title").textContent="Gameover Press Restart/Start";
     }
     if(!gameOver()){
         const index=getRandomInt(0,wordlist.length-1);
@@ -28,7 +41,7 @@ function seenNext(){
 }
 function next(){
     if(gameOver()){
-        document.getElementById("title").textContent="Gameover";
+        document.getElementById("title").textContent="Gameover Press Restart/Start";
     }
     if(!gameOver()){
         const index=getRandomInt(0,wordlist.length-1);
@@ -64,21 +77,46 @@ function restart(){
     seen=[];
     attempt=3;
     points=0;
-    displayScoreBoard()
+    displayPage(1);
+    createPaginationButtons();
     output();
 }
-function displayScoreBoard(){
-    scores.sort((a, b) => b - a);
-    document.getElementById("scoreTally").innerHTML="";
+function displayPage(page) {
     const tbody = document.getElementById("scoreTally");
-    scores.forEach((num, index) => {
+    tbody.innerHTML = "";
+
+    const start = (page - 1) * rowsPerPage;
+    const end = start + rowsPerPage;
+    scores.sort((a, b) => b - a);
+    const pageScores = scores.slice(start, end);
+
+    pageScores.forEach((score, index) => {
         const row = document.createElement("tr");
+
         const indexCell = document.createElement("td");
-        indexCell.textContent = index + 1;
+        indexCell.textContent = start + index + 1;
+
         const valueCell = document.createElement("td");
-        valueCell.textContent = num;
+        valueCell.textContent = score;
+
         row.appendChild(indexCell);
         row.appendChild(valueCell);
         tbody.appendChild(row);
     });
+    
 }
+function createPaginationButtons() {
+    let totalPages=Math.ceil(scores.length/rowsPerPage);
+    const container = document.getElementById("pagesButtons");
+    container.innerHTML = ""; // Clear existing buttons
+
+    for (let i = 1; i <= totalPages; i++) {
+        const btn = document.createElement("button");
+        btn.textContent = i;
+        btn.className = "btn btn-secondary";
+        btn.addEventListener("click", () => displayPage(i));
+        container.appendChild(btn);
+    }
+}
+
+

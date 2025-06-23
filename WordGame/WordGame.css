@@ -1,4 +1,13 @@
 body{
-    background-color:blue;
+    background-color:#57B9FF;
+    color:white;
+}
+#Container{
+    background-color: #90D5FF;
+}
+#scoreTally{
+    color:white;
+}
+#designer{
     color:white;
 }
