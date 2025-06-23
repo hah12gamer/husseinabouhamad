@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.21)  23 JUN 2025 13:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.21)  23 JUN 2025 18:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -264,7 +264,7 @@ Package hyperref Info: Link coloring OFF on input line 5.
 \openout2 = `SEG3125A3PC.aux'.
 
  (SEG3125A3PC.tex
-<university.png, id=15, 824.07875pt x 656.4525pt>
+<university.png, id=19, 824.07875pt x 656.4525pt>
 File: university.png Graphic file (type png)
 <use university.png>
 Package pdftex.def Info: university.png  used on input line 22.
@@ -298,8 +298,13 @@ Overfull \hbox (33.65532pt too wide) in paragraph at lines 4--5
  []
 
 
-Overfull \hbox (5.32198pt too wide) in paragraph at lines 11--12
-\OT1/cmr/m/n/10 a)$[]$ 
+Overfull \hbox (5.32198pt too wide) in paragraph at lines 11--13
+\OT1/cmr/m/n/10 a)$[]$
+ []
+
+
+Overfull \hbox (5.87753pt too wide) in paragraph at lines 11--13
+\OT1/cmr/m/n/10 b)$[]$ 
  []
 
 )
@@ -331,20 +336,20 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-14>
  ***********
 Package rerunfilecheck Info: File `SEG3125A3.out' has not changed.
-(rerunfilecheck)             Checksum: 1386F7E9B1468481449B1CF7074C593F;454.
+(rerunfilecheck)             Checksum: 2F4BAC7B43AAFF7E385AE518020055B5;643.
  ) 
 Here is how much of TeX's memory you used:
- 9263 strings out of 469903
- 146845 string characters out of 5467729
- 531832 words of memory out of 12000000
- 35965 multiletter control sequences out of 15000+600000
+ 9265 strings out of 469903
+ 146865 string characters out of 5467729
+ 534832 words of memory out of 12000000
+ 35966 multiletter control sequences out of 15000+600000
  628192 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,79p,439b,452s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,5n,79p,610b,452s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/hah12/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/hah12/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/hah12/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on SEG3125A3.pdf (2 pages, 86096 bytes).
+Output written on SEG3125A3.pdf (2 pages, 89141 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
- 5 named destinations out of 1000 (max. 500000)
- 30 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 50 PDF objects out of 1000 (max. 8388607)
+ 6 named destinations out of 1000 (max. 500000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 

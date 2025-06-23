@@ -49,13 +49,13 @@ function next(){
         document.getElementById("wordBox").textContent=word;
         if(isSeen(word)){
             attempt=attempt-1;
-            document.getElementById("title").textContent=attempt;
+            document.getElementById("title").textContent="Lives:"+attempt;
         }
         if(!isSeen(word)){
-            document.getElementById("title").textContent=attempt;
+            document.getElementById("title").textContent="Lives:"+attempt;
             seen.push(word);
             points=points+1;
-            document.getElementById("pts").textContent=points;
+            document.getElementById("pts").textContent="Points:"+points;
         }
     }
     
